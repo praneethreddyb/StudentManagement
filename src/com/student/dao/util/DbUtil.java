@@ -15,7 +15,7 @@ import java.util.Map;
 public class DbUtil {
 	public static Connection getConnection() throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "The@1234");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management", "admin", "The@1234");
 		return con;
 	}
 

@@ -15,7 +15,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public Map<String, Object> findUserByIdAndPwd(String loginId, String pwd)
 			throws Exception {
-		return DbUtil.get(connection, Queries.GET_STUDENT_BY_EMAIL_PASSWORD, loginId,pwd);
+		return DbUtil.get(connection, Queries.GET_STUDENT_BY_EMAIL_PASSWORD, loginId,loginId,loginId,pwd);
 	}
 
  

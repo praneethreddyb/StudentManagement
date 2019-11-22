@@ -1,7 +1,7 @@
 package com.student.dao.util;
 
 public class Queries {
-	public static final String GET_STUDENT_BY_EMAIL_PASSWORD = "SELECT pk_id,email FROM user WHERE email=? AND password=? ";
+	public static final String GET_STUDENT_BY_EMAIL_PASSWORD = "SELECT pk_id,email FROM user WHERE (email=? OR mobile_no=? OR login_id=? )AND password=? ";
 
 	public static final String VALIDATING_STUDENT_EXISTS="SELECT s.name,s.gender,s.dob,s.standard,sh.hobbies FROM students s Join student_hobbies sh ON s.pk_id=sh.student WHERE name=?,gender=?,dob=?,standard=?,hobbies=?";
 	public static final String INSERT_STUDENTS = "INSERT INTO `students`(user,name,gender,dob,standard,description) VALUES(?,?,?,?,?,?)";
